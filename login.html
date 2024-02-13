@@ -1,9 +1,43 @@
 <html>
-<body>
-<form metod="post" action="/login">
-USER NAME:<input type="text" name="username"></br>
-PASSWORD:<input type="text" name="password"></br>
-<input type="submit" action="login">
-</form>
+<script>
+
+function validation(){
+
+let username=f.un.value;
+let password=f.pass.value;
+
+
+if(username===null){
+alert("please enter user name");
+return false;
+}
+if(password===null){
+alert("please enter password");
+return false;
+}
+else{
+return true;
+}
+
+
+
+}
+</script>
+<style>
+  #div1{
+         width:100px,
+ 	 vertical-align:'center';
+
+	}
+
+</style>
+<body bgcolor="pink">
+<div id="div1">
+  <form metod="post" action="/login" name="f" onsubmit="return validation()">
+    USER NAME:<input type="text" name="username" id="un"></br>
+    PASSWORD:<input type="text" name="password" id="pass"></br>
+    <input type="submit" action="login">
+  </form>
+</div>
 </body>
 </html>
